@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishPro — Личный кабинет</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" href="/GRAMMAR/images/laptop-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="../Grammar/images/laptop-icon.png" alt="Logo" class="logo-image">
+                <div class="logo-name">
+                    <img src="../Grammar/images/pop.png" alt="EnglishPro" class="logo-text-img">
+                </div>
+            </div>   
+            <nav class="nav nav-right">
+                <a href="../MAIN_PAGE/index.html" class="nav-link">Главная</a>
+                <a href="../Grammar/gram.html" class="nav-link">Грамматика</a>
+                <a href="../Test/test.html" class="nav-link">Тесты</a>
+                <a href="../Dictionary/dictionary.html" class="nav-link">Словарь</a>
+                <a href="../Profile/profile.html" class="nav-link active">Кабинет</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Меню">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Личный кабинет</h1>
+
+            <div class="cabinet-grid">
+                <!-- Профиль -->
+                <div class="card profile-card">
+                    <div class="avatar-section">
+                        <div class="avatar-wrapper" id="avatarWrapper" title="Нажмите, чтобы изменить фото">
+                            <img src="https://via.placeholder.com/150/8BC34A/FFFFFF?text=U" alt="Avatar" id="avatarPreview" class="avatar-img">
+                            <div class="avatar-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <input type="file" id="avatarInput" accept="image/*" hidden>
+                        <p class="avatar-hint">Нажмите на фото, чтобы загрузить новое</p>
+                    </div>
+                    <div class="user-info">
+                        <h2 id="displayName">Ученик</h2>
+                        <p id="displayEmail">student@englishpro.com</p>
+                        <div class="user-level">
+                            <span class="level-badge">A2</span>
+                            <span class="level-text">Elementary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Прогресс -->
+                <div class="card stats-card">
+                    <h3><i class="fas fa-chart-line"></i> Ваш прогресс</h3>
+                    <div class="stat-row">
+                        <span>Пройдено тестов</span>
+                        <strong>12</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Слов в словаре</span>
+                        <strong>85</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Общий рейтинг</span>
+                        <strong> 1,250 XP</strong>
+                    </div>
+                    <div class="progress-wrapper">
+                        <span>Прогресс до уровня B1</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Настройки -->
+                <div class="card settings-card">
+                    <h3><i class="fas fa-cog"></i> Настройки профиля</h3>
+                    <div class="form-group">
+                        <label for="nameInput">Имя</label>
+                        <input type="text" id="nameInput" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" id="emailInput" placeholder="Ваш email">
+                    </div>
+                    <button class="btn-save" id="saveBtn">Сохранить изменения</button>
+                    <button class="btn-logout" id="logoutBtn">Выйти из аккаунта</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <div class="footer-column">
+                        <a href="/MAIN_PAGE/index.html" class="footer-link">Главная</a>
+                        <a href="/Grammar/gram.html" class="footer-link">Грамматика</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="/Test/test.html" class="footer-link">Тесты</a>
+                        <a href="/Dictionary/dictionary.html" class="footer-link">Словарь</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#" class="footer-link">Отзывы</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <p class="social-title">Мы в соцсетях</p>
+                    <div class="social-links">
+                        <a href="https://vk.com" target="_blank" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <p class="contact-phone">8(499)300-49-49</p>
+                    <p class="contact-label">Контакты</p>
+                    <p class="contact-email">Inglish@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>

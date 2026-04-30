@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishPro — Английский словарь</title>
+    <link rel="stylesheet" href="dictionary.css">
+    <link rel="icon" href="../GRAMMAR/images/laptop-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER (ваш стиль) -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="../Grammar/images/laptop-icon.png" alt="Logo" class="logo-image">
+                <div class="logo-name">
+                    <img src="../Grammar/images/pop.png" alt="EnglishPro" class="logo-text-img">
+                </div>
+            </div>   
+            <nav class="nav nav-right">
+                <a href="../MAIN_PAGE/index.html" class="nav-link">Главная</a>
+                <a href="../Grammar/gram.html" class="nav-link">Грамматика</a>
+                <a href="../Test/test.html" class="nav-link">Тесты</a>
+                <a href="../Dictionary/dictionary.html" class="nav-link active">Словарь</a>
+                <a href="../Profile/profile.html" class="nav-link">Кабинет</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Меню">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Заголовок -->
+            <div class="dictionary-header">
+                <h1 class="page-title">Английский словарь</h1>
+                <p class="subtitle">Изучайте лексику</p>
+            </div>
+
+            <!-- Поиск слова -->
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Введите слово..." autocomplete="off">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="hello-mascot">
+                    <a href="images\bookk.gif" target="_blank">
+                        <img src="images\bookk.gif" alt="Hello Mascot" class="mascot-image">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Результат поиска -->
+            <div id="wordResult" class="word-result hidden">
+                <div class="word-header">
+                    <h2 id="wordTitle" class="word-title">Carpet</h2>
+                    <div class="word-actions">
+                        <button class="btn-audio" id="audioBtn" title="Произнести">
+                            <i class="fas fa-volume-up"></i> Произнести
+                        </button>
+                        <button class="btn-favorite" id="favoriteBtn" title="Добавить в избранное">
+                            <i class="far fa-star"></i> Избранное
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="word-content">
+                    <div class="translation-block">
+                        <strong>Перевод:</strong> <span id="wordTranslation">ковер</span>
+                    </div>
+                    <div class="definition-block">
+                        <p id="wordDefinition">A fabric used as a complete floor covering.</p>
+                    </div>
+                    <div class="phonetic-block" id="phoneticBlock">
+                        <span class="phonetic" id="wordPhonetic">/ˈkɑːrpɪt/</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Загрузка -->
+            <div id="loading" class="loading hidden">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Поиск слова...</p>
+            </div>
+
+            <!-- Ошибка -->
+            <div id="error" class="error-message hidden">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Слово не найдено. Попробуйте другое.</p>
+            </div>
+
+            <!-- Избранное -->
+            <div class="favorites-section">
+                <h3 class="favorites-title">
+                    <i class="fas fa-star" style="color: var(--light);"></i>
+                    Избранное
+                </h3>
+                
+                <div class="favorites-search">
+                    <input type="text" id="favoritesSearch" placeholder="Искать в избранном...">
+                    <button id="favoritesSearchBtn">Искать</button>
+                </div>
+
+                <div id="favoritesList" class="favorites-list">
+                    <!-- Слова будут добавляться здесь -->
+                </div>
+
+                <div id="noFavorites" class="no-favorites hidden">
+                    <p>У вас пока нет избранных слов</p>
+                    <p class="hint">Добавляйте слова, нажимая на звёздочку ⭐</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (ваш стиль) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <div class="footer-column">
+                        <a href="/MAIN_PAGE/index.html" class="footer-link">Главная</a>
+                        <a href="/Grammar/gram.html" class="footer-link">Грамматика</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="/Test/test.html" class="footer-link">Тесты</a>
+                        <a href="/Dictionary/dictionary.html" class="footer-link">Словарь</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#" class="footer-link">Отзывы</a>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <p class="social-title">Мы в соцсетях</p>
+                    <div class="social-links">
+                        <a href="https://vk.com" target="_blank" class="social-link" aria-label="VKontakte">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="https://t.me" target="_blank" class="social-link" aria-label="Telegram">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contacts">
+                    <p class="contact-phone">8(499)300-49-49</p>
+                    <p class="contact-label">Контакты</p>
+                    <p class="contact-email">Inglish@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dictionary.js"></script>
+</body>
+</html>
+<!--https://api.mymemory.translated.net/get?q=%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0&langpair=ru|en-->
