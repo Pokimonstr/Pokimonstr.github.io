@@ -1,0 +1,22 @@
+body {
+            /* Выравнивание по центру экрана */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f5f5f5; /* Светлый фон */
+        }
+        a {
+            padding: 15px 30px;
+            background-color: #333; /* Черная кнопка */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        a:hover {
+            background-color: #555; /* Серый при наведении */
+        }
